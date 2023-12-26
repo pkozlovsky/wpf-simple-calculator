@@ -55,6 +55,7 @@
                 Grid.Row="2"
                 Margin="2"/>
         <Button x:Name="sevenButton" Content="7"
+                Click="sevenButton_Click"
                 Grid.Column="0"
                 Grid.Row="2"
                 Margin="2"/>

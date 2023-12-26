@@ -19,7 +19,15 @@ namespace aSimpleCalculator
         public MainWindow()
         {
             InitializeComponent();
-            resultLabel.Content = "dupa";
+            resultLabel.Content = "0";
+        }
+
+        private void sevenButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(resultLabel.Content.ToString() == "0")
+            {
+                resultLabel.Content = "7";
+            }
         }
     }
 }
