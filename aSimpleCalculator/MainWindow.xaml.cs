@@ -28,6 +28,10 @@ namespace aSimpleCalculator
             {
                 resultLabel.Content = "7";
             }
+            else
+            { 
+                resultLabel.Content = $"{resultLabel.Content}7"; 
+            }
         }
     }
 }
