@@ -21,10 +21,9 @@ namespace aSimpleCalculator
         public MainWindow()
         {
             InitializeComponent();
-            resultLabel.Content = "0";
+            //resultLabel.Content = "0";
             acButton.Click += acButton_Click;
             plusMinusButton.Click += plusMinusButton_Click;
-
         }
         private void oneButton_Click(object sender, RoutedEventArgs e)
         {
@@ -144,7 +143,7 @@ namespace aSimpleCalculator
         {
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
-                lastNumber *= -1;
+                lastNumber = lastNumber * -1;
                 resultLabel.Content = lastNumber.ToString();
             }
         }
