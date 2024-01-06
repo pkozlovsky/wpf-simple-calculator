@@ -16,10 +16,15 @@ namespace aSimpleCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastNumber, result;
+
         public MainWindow()
         {
             InitializeComponent();
             resultLabel.Content = "0";
+            acButton.Click += acButton_Click;
+            plusMinusButton.Click += plusMinusButton_Click;
+
         }
         private void oneButton_Click(object sender, RoutedEventArgs e)
         {
@@ -133,13 +138,15 @@ namespace aSimpleCalculator
         }
         private void acButton_Click(object sender, RoutedEventArgs e)
         {
-            // Code for AC button (usually clears the display)
             resultLabel.Content = "0";
         }
         private void plusMinusButton_Click(object sender, RoutedEventArgs e)
         {
-            // Code for +/- button
-            // Implement the logic to toggle between positive and negative
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber *= -1;
+                resultLabel.Content = lastNumber.ToString();
+            }
         }
         private void percentButton_Click(object sender, RoutedEventArgs e)
         {
@@ -156,12 +163,13 @@ namespace aSimpleCalculator
             // Code for * button
             // Implement the logic for multiplication
         }
-        private void minusButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Code for - button
-            // Implement the logic for subtraction
-        }
+     
         private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Code for + button
+            // Implement the logic for addition
+        }
+        private void minusButton_Click(object sender, RoutedEventArgs e)
         {
             // Code for + button
             // Implement the logic for addition
