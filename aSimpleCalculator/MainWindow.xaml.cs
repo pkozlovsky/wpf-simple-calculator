@@ -27,6 +27,40 @@ namespace aSimpleCalculator
             acButton.Click += acButton_Click;
             plusMinusButton.Click -= plusMinusButton_Click;
             plusMinusButton.Click += plusMinusButton_Click;
+            percentButton.Click -= percentButton_Click;
+            percentButton.Click += percentButton_Click;
+            divideButton.Click -= divideButton_Click;
+            divideButton.Click += divideButton_Click;
+            multiplyButton.Click -= multiplyButton_Click;
+            multiplyButton.Click += multiplyButton_Click;
+            minusButton.Click -= minusButton_Click;
+            minusButton.Click += minusButton_Click;
+            addButton.Click -= addButton_Click;
+            addButton.Click += addButton_Click;
+            equalsButton.Click -= equalsButton_Click;
+            equalsButton.Click += equalsButton_Click;
+            decimalButton.Click -= decimalButton_Click;
+            decimalButton.Click += decimalButton_Click;
+            oneButton.Click -= oneButton_Click;
+            oneButton.Click += oneButton_Click;
+            twoButton.Click -= twoButton_Click;
+            twoButton.Click += twoButton_Click;
+            threeButton.Click -= threeButton_Click;
+            threeButton.Click += threeButton_Click;
+            fourButton.Click -= fourButton_Click;
+            fourButton.Click += fourButton_Click;
+            fiveButton.Click -= fiveButton_Click;
+            fiveButton.Click += fiveButton_Click;
+            sixButton.Click -= sixButton_Click;
+            sixButton.Click += sixButton_Click;
+            sevenButton.Click -= sevenButton_Click;
+            sevenButton.Click += sevenButton_Click;
+            eightButton.Click -= eightButton_Click;
+            eightButton.Click += eightButton_Click;
+            nineButton.Click -= nineButton_Click;
+            nineButton.Click += nineButton_Click;
+            zeroButton.Click -= zeroButton_Click;
+            zeroButton.Click += zeroButton_Click;
         }
         //writing the event handlers
         private void oneButton_Click(object sender, RoutedEventArgs e)
