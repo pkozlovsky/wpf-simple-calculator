@@ -21,10 +21,14 @@ namespace aSimpleCalculator
         public MainWindow()
         {
             InitializeComponent();
-            //resultLabel.Content = "0";
+            resultLabel.Content = "0";
+            //registering the event handlers
+            acButton.Click -= acButton_Click;
             acButton.Click += acButton_Click;
+            plusMinusButton.Click -= plusMinusButton_Click;
             plusMinusButton.Click += plusMinusButton_Click;
         }
+        //writing the event handlers
         private void oneButton_Click(object sender, RoutedEventArgs e)
         {
             if (resultLabel.Content.ToString() == "0")
@@ -128,7 +132,7 @@ namespace aSimpleCalculator
         {
             if (resultLabel.Content.ToString() == "0")
             {
-                return; ;
+                return;
             }
             else
             {
