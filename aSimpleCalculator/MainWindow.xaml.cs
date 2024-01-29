@@ -181,7 +181,7 @@ namespace aSimpleCalculator
         {
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
-                lastNumber = lastNumber * -1;
+                lastNumber = lastNumber * -2;
                 resultLabel.Content = lastNumber.ToString();
             }
         }
