@@ -22,6 +22,7 @@ namespace aSimpleCalculator
         {
             InitializeComponent();
             resultLabel.Content = "0";
+
             //registering the event handlers
             acButton.Click -= acButton_Click;
             acButton.Click += acButton_Click;
@@ -41,138 +42,84 @@ namespace aSimpleCalculator
             equalsButton.Click += equalsButton_Click;
             decimalButton.Click -= decimalButton_Click;
             decimalButton.Click += decimalButton_Click;
-            oneButton.Click -= oneButton_Click;
-            oneButton.Click += oneButton_Click;
-            twoButton.Click -= twoButton_Click;
-            twoButton.Click += twoButton_Click;
-            threeButton.Click -= threeButton_Click;
-            threeButton.Click += threeButton_Click;
-            fourButton.Click -= fourButton_Click;
-            fourButton.Click += fourButton_Click;
-            fiveButton.Click -= fiveButton_Click;
-            fiveButton.Click += fiveButton_Click;
-            sixButton.Click -= sixButton_Click;
-            sixButton.Click += sixButton_Click;
-            sevenButton.Click -= sevenButton_Click;
-            sevenButton.Click += sevenButton_Click;
-            eightButton.Click -= eightButton_Click;
-            eightButton.Click += eightButton_Click;
-            nineButton.Click -= nineButton_Click;
-            nineButton.Click += nineButton_Click;
-            zeroButton.Click -= zeroButton_Click;
-            zeroButton.Click += zeroButton_Click;
+            oneButton.Click -= NumberButton_Click;
+            oneButton.Click += NumberButton_Click;
+            twoButton.Click -= NumberButton_Click;
+            twoButton.Click += NumberButton_Click;
+            threeButton.Click -= NumberButton_Click;
+            threeButton.Click += NumberButton_Click;
+            fourButton.Click -= NumberButton_Click;
+            fourButton.Click += NumberButton_Click;
+            fiveButton.Click -= NumberButton_Click;
+            fiveButton.Click += NumberButton_Click;
+            sixButton.Click -= NumberButton_Click;
+            sixButton.Click += NumberButton_Click;
+            sevenButton.Click -= NumberButton_Click;
+            sevenButton.Click += NumberButton_Click;
+            eightButton.Click -= NumberButton_Click;
+            eightButton.Click += NumberButton_Click;
+            nineButton.Click -= NumberButton_Click;
+            nineButton.Click += NumberButton_Click;
+            zeroButton.Click -= NumberButton_Click;
+            zeroButton.Click += NumberButton_Click;
         }
         //writing the event handlers
-        private void oneButton_Click(object sender, RoutedEventArgs e)
+        // Number buttons all in one trial: NumberButton_Click to be used for all number buttons
+        private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
+            int selectedValue = 0;
+
+            if (sender == zeroButton)
+            {
+                selectedValue = 0;
+            }
+            if (sender == oneButton)
+            {
+                selectedValue = 1;
+            }
+            if (sender == twoButton)
+            {
+                selectedValue = 2;
+            }
+            if (sender == threeButton)
+            {
+                selectedValue = 3;
+            }
+            if (sender == fourButton)
+            {
+                selectedValue = 4;
+            }
+            if (sender == fiveButton)
+            {
+                selectedValue = 5;
+            }
+            if (sender == sixButton)
+            {
+                selectedValue = 6;
+            }
+            if (sender == sevenButton)
+            {
+                selectedValue = 7;
+            }
+            if (sender == eightButton)
+            {
+                selectedValue = 8;
+            }
+            if (sender == nineButton)
+            {
+                selectedValue = 9;
+            }
+
             if (resultLabel.Content.ToString() == "0")
             {
-                resultLabel.Content = "1";
+                resultLabel.Content = $"{selectedValue}";
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content}1";
+                resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
         }
-        private void twoButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "2";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}2";
-            }
-        }
-        private void threeButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "3";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}3";
-            }
-        }
-        private void fourButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "4";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}4";
-            }
-        }
-        private void fiveButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "5";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}5";
-            }
-        }
-        private void sixButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "6";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}6";
-            }
-        }
-        private void sevenButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "7";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}7";
-            }
-        }
-        private void eightButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "8";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}8";
-            }
-        }
-        private void nineButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                resultLabel.Content = "9";
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}9";
-            }
-        }
-        private void zeroButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString() == "0")
-            {
-                return;
-            }
-            else
-            {
-                resultLabel.Content = $"{resultLabel.Content}0";
-            }
-        }
+        
         private void acButton_Click(object sender, RoutedEventArgs e)
         {
             resultLabel.Content = "0";
