@@ -21,7 +21,7 @@ namespace aSimpleCalculator
         public MainWindow()
         {
             InitializeComponent();
-            resultLabel.Content = "0";
+            //resultLabel.Content = "0";
 
             //registering the event handlers
             acButton.Click -= acButton_Click;
@@ -62,9 +62,14 @@ namespace aSimpleCalculator
             nineButton.Click += NumberButton_Click;
             zeroButton.Click -= NumberButton_Click;
             zeroButton.Click += NumberButton_Click;
+            zeroButton.MouseDoubleClick += ZeroButton_MouseDoubleClick;
         }
         //writing the event handlers
         // Number buttons all in one trial: NumberButton_Click to be used for all number buttons
+        private void ZeroButton_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            resultLabel.Content = $"{resultLabel.Content}ups!";
+        }
         private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
             int selectedValue = 0;
